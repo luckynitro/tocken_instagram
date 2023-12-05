@@ -1,0 +1,16 @@
+import hashlib
+
+def generar_hash_contenido(contenido):
+    hash_contenido = hashlib.sha256(contenido.encode()).hexdigest()
+    return hash_contenido
+
+# Función para almacenar el hash en un archivo
+def almacenar_hash_en_archivo(hash_contenido):
+    with open('hash_archivo.txt', 'a') as archivo:
+        archivo.write(hash_contenido + '\n')
+
+# Ejemplo de uso
+contenido_a_subir = "Contenido que vas a subir a Instagram"
+hash_del_contenido = generar_hash_contenido(contenido_a_subir)
+almacenar_hash_en_archivo(hash_del_contenido)
+

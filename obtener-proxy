@@ -1,0 +1,14 @@
+import requests
+
+def obtener_proxy():
+    # URL proporcionada por tu servicio de proxy
+    url_servicio_proxy = 'https://api.tu-servicio-de-proxy.com/get-proxy'
+    
+    # Hacer una solicitud al servicio de proxy para obtener la información del proxy
+    respuesta = requests.get(url_servicio_proxy)
+    
+    # Analizar la respuesta JSON para obtener el proxy
+    datos_proxy = respuesta.json()
+    proxy = datos_proxy['proxy']
+    
+    return proxy

@@ -1,0 +1,2 @@
+// En tu archivo de configuración o donde configuras variables de entorno
+const stripe = require('stripe')('pk_live_51JuMDRLtSA2NVaLSQvkAzy8qfl5e0sPpPK9kWrNpdBkbmTp0M222h5ReuqlX2CU3coxCXFHv0xUz6BPCfPa0C9V500htTKlzBp');

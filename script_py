@@ -1,0 +1,9 @@
+import instaloader
+
+L = instaloader.Instaloader()
+usuario = 'marisolvrs'
+# Añade el código para iniciar sesión y otras interacciones con instaloader
+
+profile = instaloader.Profile.from_username(L.context, usuario)
+for post in profile.get_posts():
+    print(post.url)

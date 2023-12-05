@@ -1,0 +1,4 @@
+import instaloader
+
+L = instaloader.Instaloader()
+L.context.login('marisolvrs', 'Ladrondemeirda21+')  # o utiliza .load_session_from_file() si prefieres

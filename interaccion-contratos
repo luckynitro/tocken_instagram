@@ -1,0 +1,5 @@
+const contratoInteligente = new web3.eth.Contract(tuABI, tuDireccionContrato);
+const cuenta = await web3.eth.personal.newAccount('f1382aa42ff9088b4fa2eb2badd813af9a6bf54ae614231643c1dc830c66f891'); // Asegúrate de manejar esto de manera segura
+
+const transaccion = await contratoInteligente.methods.crearContrato(contenido).send({ from: cuenta });
+console.log('Contrato creado:', transaccion);

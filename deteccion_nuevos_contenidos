@@ -1,0 +1,30 @@
+from instaloader import Instaloader, Profile
+from instaloader.exceptions import ConnectionException
+import time
+from fake_useragent import UserAgent
+
+def main():
+    # Configurar Instaloader
+    L = Instaloader(user_agent=UserAgent().random)
+
+    usuario = 'marisolvrs'
+    contraseña = 'Ladrondemeirda21+'  # Reemplazar con tu contraseña
+
+    try:
+        # Intentar iniciar sesión
+        L.context.login(usuario, contraseña)
+        print("Inicio de sesión exitoso.")
+
+        # Obtener el perfil del usuario
+        profile = Profile.from_username(L.context, usuario)
+        
+        # Resto del código...
+        
+    except ConnectionException as e:
+        print(f"Error de conexión: {e}")
+        print("Posible bloqueo. Esperando antes de volver a intentar.")
+        time.sleep(600)  # Esperar 10 minutos antes de volver a intentar
+
+if __name__ == "__main__":
+    main()
+
