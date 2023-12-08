@@ -1,0 +1,7 @@
+clarifai
+requests
+Pillow
+jsonschema
+future
+configparser
+

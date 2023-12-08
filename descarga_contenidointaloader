@@ -1,0 +1,11 @@
+import instaloader
+
+def descargar_contenido(usuario):
+    loader = instaloader.Instaloader()
+    perfil = instaloader.Profile.from_username(loader.context, usuario)
+    for publicacion in perfil.get_posts():
+        loader.download_post(publicacion, target=usuario)
+
+if __name__ == "__main__":
+    descargar_contenido("nombre_de_usuario")  # Reemplaza con el nombre de usuario deseado
+

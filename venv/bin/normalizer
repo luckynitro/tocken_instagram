@@ -1,4 +1,4 @@
-#!/home/lucky/tocken_instagram/venv/bin/python
+#!/home/lucky/tocken_instagram/venv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys
